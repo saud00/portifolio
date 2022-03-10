@@ -1,18 +1,21 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+  /* min-height: 100vh; */
+  /* min-width: 100vw; */
+  /* padding: 0 0.5rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: left;
+  /* height: 100vh; */
 }
 
 .main {
-  padding: 5rem 0;
+  /* min-width: 100vw; */
+  padding: 5rem 7vw;
   flex: 1;
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
+  min-height:100vh;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
 }
@@ -43,7 +46,10 @@
 .title a:active {
   text-decoration: underline;
 }
-
+.name{
+  color: white;
+  font-family: Sequel, sans-serif;
+}
 .title {
   margin: 0;
   line-height: 1.15;
