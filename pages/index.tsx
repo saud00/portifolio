@@ -14,46 +14,46 @@ import LeftNav from '../components/LeftNav'
 const Home: NextPage = () => {
   const [page, setPage] = useState(true)
   const [scroll, setScroll] = useState(0)
-  const name:any = useRef(null)
-  const name2:any = useRef(null)
-  const name3:any = useRef(null)
+  // const name:any = useRef(null)
+  // const name2:any = useRef(null)
+  // const name3:any = useRef(null)
 
-  const naam1:string = "SAUD"
-  const naam2:string = "AHMED"
-  const naam3:string = "MALIK"
-  let arr1:string[] = Array.from(naam1)
-  let arr2:string[] = Array.from(naam2)
-  let arr3:string[] = Array.from(naam3)
+  // const naam1:string = "SAUD"
+  // const naam2:string = "AHMED"
+  // const naam3:string = "MALIK"
+  // let arr1:string[] = Array.from(naam1)
+  // let arr2:string[] = Array.from(naam2)
+  // let arr3:string[] = Array.from(naam3)
  
   useEffect(() => {
     let timeout = setTimeout(():void => {
       setPage(false)
     }, 4000);
 
-    gsap.from(name.current, {
-      opacity: 0,
-      x: -100,
-      duration: 2,
-      // rotation: 5,
-      delay: 1,
-    });
+    // gsap.from(name.current, {
+    //   opacity: 0,
+    //   x: -100,
+    //   duration: 2,
+    //   // rotation: 5,
+    //   delay: 1,
+    // });
     
-    gsap.from(name2.current, {
-      opacity: 0,
-      y: -50,
-      duration: 2,
-      // rotation: 5,
-      delay: 1,
-      ease: "linear"
-    });
+    // gsap.from(name2.current, {
+    //   opacity: 0,
+    //   y: -50,
+    //   duration: 2,
+    //   // rotation: 5,
+    //   delay: 1,
+    //   ease: "linear"
+    // });
     
-    gsap.from(name3.current, {
-      opacity: 0,
-      x: 200,
-      duration: 2,
-      // rotation: 5,
-      delay: 1,
-    });
+    // gsap.from(name3.current, {
+    //   opacity: 0,
+    //   x: 200,
+    //   duration: 2,
+    //   // rotation: 5,
+    //   delay: 1,
+    // });
 
     return () => { clearTimeout(timeout) }
   }, [])
@@ -81,7 +81,7 @@ const Home: NextPage = () => {
           page? 
           <main className={styles.main} style={{backgroundColor:"black"}}>
 
-            <span className="border-l-8 border-white h-20" >&nbsp;&nbsp;&nbsp;</span>
+            {/* <span className="border-l-8 border-white h-20" >&nbsp;&nbsp;&nbsp;</span>
 
           <span className="text-5xl text-white font-bold font-Staatliches " ref={name}>
             {arr1} &nbsp;&nbsp;
@@ -93,12 +93,17 @@ const Home: NextPage = () => {
 
           <span className="text-5xl text-white font-bold font-Staatliches" ref={name3}>
             {arr3}
-          </span>
+          </span> */}
+          <img src="sam.gif" alt="startup"  />
         </main>
 
         :
 
-        <main className={`${  scroll>80 && 'transition ease-in-out delay-150 duration-700 dark:dark:bg-gray-800 dark:text-white'} h-screen pl-[10vw] md:pl-[5vw]`} >
+        <main className={`${  scroll>80 && 'transition ease-in-out delay-150 duration-700 dark:dark:bg-black dark:bg-opacity-85 dark:text-white'} h-screen pl-[10vw] md:pl-[7vw]`} >
+
+          <div>
+            <img src="/saudshadow.png" alt="background image" className="fixed h-screen z-[-1] fixed right-5 opacity-50"/>
+          </div> 
 
           <LeftNav/>
           <FirstPara/>
@@ -106,6 +111,8 @@ const Home: NextPage = () => {
         </main>
       }
 
+      {
+        !page &&
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -116,6 +123,8 @@ const Home: NextPage = () => {
          
         </a>
       </footer>
+      }
+
     </div>
   )
 }

@@ -13,6 +13,11 @@ module.exports = {
         'press-start': ['"Press Start 2P"', 'cursive']
 
       },
+      opacity: {
+                 '10': '0.1',
+                 '20': '0.2',
+                 '85': '0.85',
+                }
     },
   },
   plugins: [],
