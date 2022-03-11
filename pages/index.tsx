@@ -100,11 +100,11 @@ const Home: NextPage = () => {
 
         <main className={`${  scroll>80 && 'transition ease-in-out delay-150 duration-700 dark:dark:bg-gray-800 dark:text-white'} h-screen pl-[10vw] md:pl-[5vw]`} >
 
+          <LeftNav/>
           <FirstPara/>
 
         </main>
       }
-      {/* <LeftNav/> */}
 
       <footer className={styles.footer}>
         <a
