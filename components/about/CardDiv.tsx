@@ -1,8 +1,23 @@
+import path from 'path'
 import React from 'react'
 
-type Props = {}
+type CARDS = {
+    id: number,
+    name: string
+    imgsrc : string,
+    link: string
+}[]
 
-const CardDiv = (props: Props) => {
+const cardData:CARDS = [
+    {
+        id:1,
+        name: "tour site",
+        imgsrc: '/tour.jpg',
+        link: ''
+    }
+]
+
+const CardDiv = () => {
   return (
     <div>
         
