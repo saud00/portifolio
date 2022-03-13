@@ -1,11 +1,21 @@
 import React from 'react'
+import Image from 'next/image'
+interface Props {
+    val: {
+        id: number,
+        name: string
+        imgsrc : string,
+        link: string
+    },
+    ind: number
+}
 
-type Props = {}
+const Cards: React.FC<Props>  = (props: Props) => {
+    const {id, name, imgsrc, link} = props.val;
 
-const Cards = (props: Props) => {
   return (
-    <div className='h-220 w-220 rounded overflow-hidden shadow-lg' >
-        <img src="/logo.png" alt="cards" />
+    <div style={{width: '100%', height: '100%', position: 'relative'}}>
+        <Image src={`${imgsrc}`} alt={`${name}`} width="100%" height="100%" layout="fill"/>
     </div>
   )
 }

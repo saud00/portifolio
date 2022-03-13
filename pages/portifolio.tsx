@@ -1,5 +1,7 @@
 import React from 'react'
+import CardDiv from '../components/about/CardDiv'
 import { PortifolioPara } from '../components/about/FirstPara'
+import LeftNav from '../components/LeftNav'
 
 type Props = {}
 
@@ -18,10 +20,12 @@ const Portifolio = (props: Props) => {
 
 
   return (
+      
     <main className={`${  scroll>80 && 'transition ease-in-out delay-150 duration-700 dark:dark:bg-black dark:bg-opacity-85 dark:text-white'} h-screen pl-[10vw] md:pl-[7vw]`} >
 
-
+    <LeftNav/>
     <PortifolioPara/>
+    <CardDiv/>
 
   </main>
   )

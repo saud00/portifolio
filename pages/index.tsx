@@ -94,7 +94,10 @@ const Home: NextPage = () => {
           <span className="text-5xl text-white font-bold font-Staatliches" ref={name3}>
             {arr3}
           </span> */}
-          <img src="sam.gif" alt="startup"  />
+          <div className='overflow-hidden'>
+
+            <img src="sam1.gif" alt="startup" />
+          </div>
         </main>
 
         :

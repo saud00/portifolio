@@ -20,7 +20,7 @@ const LeftNav = (props: Props) => {
             }
         </div>
         <div>
-            <Link href="/portifolio"><a>portifolio</a></Link>
+            <Link href="/portifolio"><a>portifo</a></Link>
         </div>
     </div>
   )
