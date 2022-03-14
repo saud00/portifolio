@@ -13,19 +13,19 @@ const cardData:CARDS = [
         id:1,
         name: "tour site",
         imgsrc: '/tour.png',
-        link: 'tour2.netlify.app/'
+        link: 'https://tour2.netlify.app/'
     },
     {
         id:2,
         name:"resturent site",
         imgsrc:'/hotel.png',
-        link:'friendlyhotel.netlify.app/'
+        link:'https://friendlyhotel.netlify.app/'
     },
     {
         id:3,
         name:'business',
         imgsrc:'/business.png',
-        link:'busines12.netlify.app/'
+        link:'https://busines12.netlify.app/'
     }
 ]
 
