@@ -1,12 +1,16 @@
-import React from 'react'
+import React,{useState} from 'react'
 import CardDiv from '../components/about/CardDiv'
 import { PortifolioPara } from '../components/about/FirstPara'
 import LeftNav from '../components/LeftNav'
+import styles from '../styles/portifolio.module.css'
 
-type Props = {}
+
+type Props = {
+}
 
 const Portifolio = (props: Props) => {
   const [scroll, setScroll] = React.useState(0)
+  const [blurStyle, setBlurStyle] = useState(0)
 
 
   const handleScroll = () => {
@@ -25,7 +29,7 @@ const Portifolio = (props: Props) => {
 
     <LeftNav/>
     <PortifolioPara/>
-    <CardDiv/>
+        <CardDiv  />
 
   </main>
   )

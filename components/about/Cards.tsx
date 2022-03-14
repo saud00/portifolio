@@ -1,41 +1,49 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+import styles from '../../styles/portifolio.module.css'
+
 
 interface Props {
     val: {
         id: number,
         name: string
         imgsrc : string,
-        link: string
+        link: string,
+        gif: string
     },
     ind: number
 }
 
-interface childProps{
-    
-}
 
 const Cards: React.FC<Props>  = (props: Props) => {
-    const {id, name, imgsrc, link} = props.val;
+    const {id, name, imgsrc, link, gif} = props.val;
+    const [changeLogo, setChangeLogo] = useState(false)
 
-    const mouseEnter=(id:any)=>{
-        {
-            id === 1 ? document.body.style.backgroundColor = "red" :
-            id === 2 ? document.body.style.backgroundColor = "blue" :
-            id === 3 ? document.body.style.backgroundColor = "yellow" :
-            document.body.style.backgroundColor = "inherit"
+    const mouseEnter=(e,id:any)=>{
+            setChangeLogo(true)
+            {
+                id === 1 ? document.body.style.backgroundColor = "rgb(77 81 80)"   :
+                id === 2 ? document.body.style.backgroundColor = "silver" :
+                id === 3 ? document.body.style.backgroundColor = "rgb(115 16 16)" :
+                document.body.style.backgroundColor = "inherit"
+            }
         }
-    }
-    
-    const mouseLeave=()=>{
-        document.body.style.backgroundColor = "inherit"
+        
+        const mouseLeave=()=>{
+        setChangeLogo(false)
+        document.body.style.backgroundColor = "inherit";
     }
 
   return (
-    <div style={{width: '100%', height: '100%', position: 'relative'}} className='cursor-pointer' >
-            <Image src={`${imgsrc}`} alt={`${name}`} width="100%" height="100%" layout="fill" onClick={()=>{window.open(`${link}`)}} onMouseEnter={e=>mouseEnter(id)} onMouseLeave={mouseLeave} />
-    </div>
+    <div className= 'cursor-pointer w-[100%] h-[100%] relative rounded-lg '  >
+        {
+            changeLogo ? 
+            <Image   src={`${gif}`} alt={`${name}`} width="100%" height="100%" layout="fill" onClick={()=>{window.open(`${link}`)}}  className={styles.imgDiv} onMouseEnter={e=>mouseEnter(e,id)} onMouseLeave={mouseLeave}/>
+            :
+            <Image   src={`${imgsrc}`} alt={`${name}`} width="100%" height="100%" layout="fill" onClick={()=>{window.open(`${link}`)}}  className={styles.imgDiv} onMouseEnter={e=>mouseEnter(e,id)} onMouseLeave={mouseLeave}/>
+        }
+            </div>
+    
   )
 }
 
