@@ -22,21 +22,21 @@ const cardData:CARDS = [
         id:2,
         name:"resturent site",
         imgsrc:'/hotel.png',
-        gif:'/toursity.gif',
+        gif:'/hotel.gif',
         link:'https://friendlyhotel.netlify.app/'
     },
     {
         id:3,
         name:'business',
         imgsrc:'/business.png',
-        gif:'/toursity.gif',
+        gif:'/business.gif',
         link:'https://busines12.netlify.app/'
     }
 ]
 
 const CardDiv = () => {
   return (
-    <div  style={{display:'flex', flexWrap:'wrap', justifyContent:'space-evenly' }}  >
+    <div  style={{display:'flex', flexWrap:'wrap', justifyContent:'space-evenly', backgroundColor: 'inherit', width:'100%' }}  >
         {
             cardData.map((val , ind)=>{
                 return(

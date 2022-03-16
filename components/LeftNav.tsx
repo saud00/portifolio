@@ -2,7 +2,8 @@ import Image from 'next/image'
 import React, {useState} from 'react'
 import Link from 'next/link'
 import Router from 'next/router';
-
+import { FiTwitter } from "react-icons/fi";
+import { FaLinkedinIn } from "react-icons/fa";
 type Props = {}
 
 const LeftNav = (props: Props) => {
@@ -21,6 +22,10 @@ const LeftNav = (props: Props) => {
         </div>
         <div>
             <Link href="/portifolio"><a>portifo</a></Link>
+        </div>
+        <div>
+            <FaLinkedinIn/>
+            <FiTwitter/>
         </div>
     </div>
   )
