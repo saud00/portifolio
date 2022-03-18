@@ -27,6 +27,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* position: absolute;
+  bottom: 0; */
 }
 
 .footer a {
@@ -126,3 +128,13 @@
   }
 }
 
+.reactIcon {
+  max-width: 12em;
+  fill: #0f0f0f;
+  color:#0f0f0f
+}
+
+/* if you want to change the original color */
+.devicon-devicon-plain path {
+  fill: #0f0f0f;
+}

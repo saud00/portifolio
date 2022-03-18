@@ -29,13 +29,13 @@ const LeftNav = (props: Props) => {
           <div className='mx-auto'>
             <FiTwitter size='2em' className='hover:text-blue-400' onClick={()=>{window.open('https://twitter.com/Saud_sahib')}}/>
           </div>
-          <div style={{writingMode:'vertical-rl'}} className='mx-auto opacity-30 font-Press+Start' >
+          <div style={{writingMode:'vertical-rl',fontFamily: 'Orbitron'}} className='mx-auto opacity-30 ' >
             DOB 23 MAR 1994
           </div>
         </div>
     </div>
 
-      <div className='fixed right-3 top-2 scale-y-150' > 
+      <div className='fixed right-3 top-2 scale-y-150 z-1150' > 
       <Link href="/portifolio"><a>
         PORTIFOLIO
         </a></Link>
