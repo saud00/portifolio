@@ -64,7 +64,7 @@ const Home: NextPage = () => {
             <img src="/saudshadow.png" alt="background image"/>
           </div> 
 
-          <LeftNav/>
+          <LeftNav scroll={scroll} />
           <FirstPara/>
           <ExpertisePara/>
         </main>
