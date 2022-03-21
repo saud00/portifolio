@@ -5,9 +5,9 @@ type Props = {}
 const ExpertisePara = (props: Props) => {
   return (
     <div>
-        <div className='bg-white min-h-[100vh] text-black ' >
+        <div className='bg-white  text-black py-11 ' >
 
-            <div className='text-6xl sm:text-9xl font-extrabold h-full flex scale-y-50 font-Staatliches'>
+            <div className='text-6xl sm:text-9xl font-extrabold  flex scale-y-50 font-Staatliches'>
                 Expertise
             </div>
 
@@ -16,8 +16,8 @@ const ExpertisePara = (props: Props) => {
             <img className='max-w-[5em] sm:max-w-[10em]' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
 
             <img className='max-w-[5em] sm:max-w-[10em]' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-
-            <img className='max-w-[5em] sm:max-w-[10em]' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" />
+           
+            <img className='max-w-[5em] sm:max-w-[10em]' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" />
 
             <img className='max-w-[5em] sm:max-w-[10em]' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" />
 

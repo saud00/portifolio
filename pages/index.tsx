@@ -7,6 +7,7 @@ import gsap from 'gsap'
 import FirstPara from '../components/about/FirstPara'
 import LeftNav from '../components/LeftNav'
 import ExpertisePara from '../components/about/ExpertisePara'
+import Footer from '../components/Footer'
 
 
 const Home: NextPage = () => {
@@ -58,10 +59,10 @@ const Home: NextPage = () => {
 
 //About front page
 
-        <main className={`${  scroll>80 && 'transition ease-in-out delay-150 duration-700 dark:dark:bg-black dark:bg-opacity-85 dark:text-white'} h-full pl-[10vw] md:pl-[7vw]`} >
+        <main className={`${  scroll>80 && 'transition ease-in-out delay-150 duration-700 dark:dark:bg-black dark:bg-opacity-85 dark:text-white'} h-full w-screen pl-[10vw] md:pl-[6vw]`} >
 
-          <div  className="fixed h-screen z-[-1] right-5 opacity-50">
-            <img src="/saudshadow.png" alt="background image"/>
+          <div  className="fixed h-screen z-[-1] right-0 md:right-4 md:max-w-50 opacity-50">
+            <img src="/saudshadow.png" alt="background image"  />
           </div> 
 
           <LeftNav scroll={scroll} />
@@ -76,16 +77,7 @@ const Home: NextPage = () => {
         //if its not a startup than show footer
 
         !page &&
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by &nbsp;  <b>Saud</b>
-         
-        </a>
-      </footer>
+      <Footer/>
       }
 
     </div>

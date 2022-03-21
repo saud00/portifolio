@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import CardDiv from '../components/about/CardDiv'
 import { PortifolioPara } from '../components/about/FirstPara'
+import Footer from '../components/Footer'
 import LeftNav from '../components/LeftNav'
 import styles from '../styles/portifolio.module.css'
 
@@ -10,7 +11,7 @@ type Props = {
 
 const Portifolio = (props: Props) => {
   const [scroll, setScroll] = React.useState(0)
-  const [blurStyle, setBlurStyle] = useState(0)
+  const [blurStyle, setBlurStyle] = useState(false)
 
 
   const handleScroll = () => {
@@ -25,13 +26,14 @@ const Portifolio = (props: Props) => {
 
   return (
       
-    <main className={`${  scroll>80 && 'transition ease-in-out delay-150 duration-700 dark:dark:bg-black dark:bg-opacity-85 dark:text-white'} h-screen pl-[10vw] md:pl-[7vw]`} >
+    <main className={`${  scroll>80 && 'transition ease-in-out delay-150 duration-700 dark:dark:bg-black dark:bg-opacity-85  dark:text-white'} ${blurStyle && 'dark:bg-opacity-0' } h-screen pl-[10vw] md:pl-[6vw]`} >
 
     <LeftNav scroll={scroll}/>
     <PortifolioPara/>
-        <CardDiv  />
-
+    <CardDiv setBlurStyle={setBlurStyle} />
+    <Footer/>
   </main>
+
   )
 }
 

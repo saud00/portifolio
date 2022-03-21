@@ -7,8 +7,12 @@ type CARDS = {
     name: string
     imgsrc : string,
     gif: string,
-    link: string
+    link: string,
+    logo1: string,
+    logo2: string,
 }[]
+
+
 
 const cardData:CARDS = [
     {
@@ -16,33 +20,46 @@ const cardData:CARDS = [
         name: "tour site",
         imgsrc: '/tour.jpg',
         gif:'/toursity.gif',
-        link: 'https://tour2.netlify.app/'
+        link: 'https://tour2.netlify.app/',
+        logo1: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg',
+        logo2: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg'
     },
     {
         id:2,
         name:"resturent site",
         imgsrc:'/hotel.png',
         gif:'/hotel.gif',
-        link:'https://friendlyhotel.netlify.app/'
+        link:'https://friendlyhotel.netlify.app/',
+        logo1:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+        logo2:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
     },
     {
         id:3,
         name:'business',
         imgsrc:'/business.png',
         gif:'/business.gif',
-        link:'https://busines12.netlify.app/'
+        link:'https://busines12.netlify.app/',
+        logo1:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+        logo2:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+
     }
 ]
 
-const CardDiv = () => {
+const CardDiv = ({setBlurStyle}) => {
   return (
-    <div  style={{display:'flex', flexWrap:'wrap', justifyContent:'space-evenly', backgroundColor: 'inherit', width:'100%' }}  >
+    <div  style={{display:'flex', flexWrap:'wrap', justifyContent:'space-evenly', backgroundColor: 'inherit', width:'100%', height:430 }} className='bg-inherit' >
         {
             cardData.map((val , ind)=>{
                 return(
-                    <div  key={ind} style={{maxWidth:360, maxHeight:400, width:360, height:300, margin:'10px auto'}}  className="rounded-lg" >
+                    <div  key={ind} style={{maxWidth:360, maxHeight:400, width:345, height:300, margin:'10px auto'}}  className='rounded-lg bg-inherit' onMouseEnter={()=>{setBlurStyle(true)}} onMouseLeave={()=>{setBlurStyle(false)}} >
                         <Cards val={val} ind={ind}/>
+
+                    <div className='flex justify-evenly flex-row flex-nowrap bg-slate-600 h-30'>
+                        <img  src={`${val.logo1}`} alt={`${val.name}`}   className='w-[4em]' />
+                        <img  src={`${val.logo2}`} alt={`${val.name}`}  className='w-[4em]' />
+
                     </div>
+</div>
                 )
             })
         }
