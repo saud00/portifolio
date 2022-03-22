@@ -17,7 +17,7 @@ const ExpertisePara = (props: Props) => {
 
             <img className='max-w-[5em] sm:max-w-[10em]' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
            
-            <img className='max-w-[5em] sm:max-w-[10em]' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" />
+            <img className='max-w-[5em] sm:max-w-[10em] ' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" />
 
             <img className='max-w-[5em] sm:max-w-[10em]' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" />
 

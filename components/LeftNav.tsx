@@ -16,7 +16,6 @@ type Props = {
 const LeftNav = (props: Props) => {
 const {scroll} = props
     const [onImg , setOnImg] = useState(false)
-    console.log(props.scroll)
 
   return (
     <>

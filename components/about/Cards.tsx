@@ -24,9 +24,9 @@ const Cards: React.FC<Props>  = (props: Props) => {
     const mouseEnter=(e,id:any)=>{
             setChangeLogo(true)
             {
-                id === 1 ? document.body.style.backgroundColor = "rgb(87 181 90)"   :
-                id === 2 ? document.body.style.backgroundColor = "silver" :
-                id === 3 ? document.body.style.backgroundColor = "rgb(115 16 16)" :
+                id === 1 ? document.body.style.backgroundColor = "rgb(6 95 70)"   :
+                id === 2 ? document.body.style.backgroundColor = "rgb(115 16 16)" :
+                id === 3 ? document.body.style.backgroundColor = "rgb(12 74 110)" :
                 document.body.style.backgroundColor = "inherit"
             }
         }
@@ -37,7 +37,7 @@ const Cards: React.FC<Props>  = (props: Props) => {
     }
 
   return (
-      <div className= 'cursor-pointer w-[100%] h-[100%] relative rounded-lg'>
+      <div className= 'cursor-pointer w-[100%] h-[300px] relative rounded-lg'>
         {
             changeLogo ? 
             <Image   src={`${gif}`} alt={`${name}`} layout="fill" onClick={()=>{window.open(`${link}`)}}  className={styles.imgDiv} onMouseEnter={e=>mouseEnter(e,id)} onMouseLeave={mouseLeave}/>

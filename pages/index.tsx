@@ -11,13 +11,23 @@ import Footer from '../components/Footer'
 
 
 const Home: NextPage = () => {
-  const [page, setPage] = useState(true)
+  const [firstTime, setTime] = useState(true)
+  const initialState = 0
+  const [incrementFirstTime, setIncrementFirstTime] = useState(initialState)
+  const counterRef = useRef(initialState)
+
   const [scroll, setScroll] = useState(0)
+
   useEffect(() => {
     let timeout = setTimeout(():void => {
-      setPage(false)
-    }, 4000);
+    setTime(false)
+    // setIncrementFirstTime( prevState => prevState + 1 )
+    setIncrementFirstTime(counterRef.current + 1)
+    // localStorage.setItem('incrementFirstTime',incrementFirstTime)
+    console.log('1',incrementFirstTime)
 
+    }, 4000);
+    console.log(incrementFirstTime)
 
     return () => { clearTimeout(timeout) }
   }, [])
@@ -46,7 +56,7 @@ const Home: NextPage = () => {
 }
 
       {
-          page? 
+        firstTime && incrementFirstTime===0 ? 
           <main className={styles.main} style={{backgroundColor:"black"}}>
 
           <div className='overflow-hidden'>
@@ -57,7 +67,7 @@ const Home: NextPage = () => {
 
         :
 
-//About front page
+//About front firstTime
 
         <main className={`${  scroll>80 && 'transition ease-in-out delay-150 duration-700 dark:dark:bg-black dark:bg-opacity-85 dark:text-white'} h-full w-screen pl-[10vw] md:pl-[6vw]`} >
 
@@ -76,7 +86,7 @@ const Home: NextPage = () => {
 
         //if its not a startup than show footer
 
-        !page &&
+        !firstTime &&
       <Footer/>
       }
 
