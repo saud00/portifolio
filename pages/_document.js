@@ -4,7 +4,7 @@ import Document, {
     Main,
     NextScript,
   } from 'next/document'
-  import LeftNav from '../components/LeftNav'
+  // import FirstTimeGif from '../components/FirstTimeGif'
 
   class MyDocument extends Document {
     static async getInitialProps(ctx) {
@@ -15,6 +15,8 @@ import Document, {
     
   
     render() {
+
+
       return (
         <Html>
           <Head>
@@ -31,6 +33,7 @@ import Document, {
 
           </Head>
           <body>
+            {/* <FirstTimeGif/> */}
             <Main />
             <NextScript />
           </body>

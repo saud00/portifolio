@@ -6,16 +6,21 @@ import { FiTwitter } from "react-icons/fi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { BsGithub } from "react-icons/bs";
-
+import { useRouter } from 'next/router';
 import { FiGithub } from "react-icons/fi";
 
-type Props = {
-  scroll : number
+interface Props  {
+  scroll? : number;
 }
 
-const LeftNav = (props: Props) => {
-const {scroll} = props
-    const [onImg , setOnImg] = useState(false)
+interface Path{
+}
+
+const LeftNav = ({scroll} : Props ) => {
+  const router = useRouter()
+  const [onImg , setOnImg] = useState(false)
+  let path: string = router.pathname 
+  console.log(path)
 
   return (
     <>
@@ -31,7 +36,7 @@ const {scroll} = props
         </div>
         </div>
 
-        <div className={`h-[50%] flex flex-col flex-wrap flex-1 justify-evenly ${scroll>80 && 'max-h-[30%]' } `}>
+        <div className={`h-[50%] flex flex-col flex-wrap flex-1 justify-evenly ${scroll !== undefined && scroll >80 && 'max-h-[30%]' } `}>
 
           <div className='mx-auto'  >
           <FiGithub size='2em' className='hover:text-slate-400' onClick={()=>{window.open('https://github.com/saud00')}}/>
@@ -45,7 +50,7 @@ const {scroll} = props
             <FiTwitter size='2em' className='hover:text-blue-400' onClick={()=>{window.open('https://twitter.com/Saud_sahib')}}/>
           </div>
 
-          <div style={{ writingMode:'vertical-rl',fontFamily: 'Orbitron'}} className={`mx-auto opacity-30 ${scroll>80 && 'hidden' }`} >
+          <div style={{ writingMode:'vertical-rl',fontFamily: 'Orbitron'}} className={`mx-auto opacity-30 ${scroll !== undefined && scroll>80 && 'hidden' }`} >
             DOB 23 MAR 1994
           </div>
 
@@ -53,8 +58,11 @@ const {scroll} = props
     </div>
 
       <div className='fixed right-4 top-2 scale-x-150 z-1150 font-Staatliches' > 
-      <Link href="/portifolio"><a>
-        PORTIFOLIO
+      <Link href={`${ path === '/portifolio' ? '/' : "/portifolio"}`}>
+        <a>
+        {
+          path && path === '/portifolio' ? 'HOME' : "PORTIFOLIO"
+        }
         </a></Link>
       </div>
       </>

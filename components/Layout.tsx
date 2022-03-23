@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      <div className="w-[100%] max-w-1400 mx-0 my-auto">
+      <div className = "w-[100%] max-w-1400 mx-0 my-auto" >
         <SwitchTransition>
           <Transition
             key={router.pathname}
