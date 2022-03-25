@@ -8,15 +8,14 @@ import FirstPara from '../components/about/FirstPara'
 import LeftNav from '../components/LeftNav'
 import ExpertisePara from '../components/about/ExpertisePara'
 import Footer from '../components/Footer'
-import FirstTImeGif from '../components/firstTImeGif'
+import FirstTImeGif from '../components/FirstTImeGif'
+import Resume from '../components/Resume'
 
 
 const Home: NextPage = () => {
-  // const [firstTime, setTime] = useState(true)
 
   const [scroll, setScroll] = useState(0)
-   
-  // console.log(firstTime)
+
   const handleScroll = () => {
       setScroll(window.scrollY)
   }
@@ -37,33 +36,23 @@ const Home: NextPage = () => {
       </Head>
 
 
-      {/* {
-        firstTime && incrementFirstTime===0 ? 
-        <FirstTImeGif setTime={setTime} />
-       
-
-        :  */}
-
-
         <main className={`${  scroll>80 && 'transition ease-in-out delay-150 duration-700 dark:dark:bg-black dark:bg-opacity-85 dark:text-white'} h-full w-screen pl-[10vw] md:pl-[6vw]`} >
 
-          <div  className="fixed h-screen z-[-1] right-0 md:right-4 md:max-w-50 opacity-50">
-            <img src="/saudshadow.png" alt="background image"  />
+          <div  className="fixed h-screen z-[-1] right-0 md:right-4 md:max-w-50 opacity-100">
+            <img src="/project.png" alt="background image"  />
           </div> 
 
           <LeftNav scroll={scroll} />
           <FirstPara/>
           <ExpertisePara/>
+        <Resume/>
         </main>
-     {/* } */}
 
-</div>
-      {/* {
+    </div>
 
 
-        !firstTime && */}
+
       <Footer/>
-      {/* } */}
 
     </div>
   )

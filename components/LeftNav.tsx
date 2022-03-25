@@ -25,7 +25,7 @@ const LeftNav = ({scroll} : Props ) => {
   return (
     <>
     <div className='bg-black w-[10vw] md:w-[6vw] flex flex-col flex-1 justify-between text-white  fixed left-0 top-0 h-screen overflow-hidden'>
-      <div className='h-[50%] '>
+    <div className='h-[50%] '>
         <div className={`${onImg && 'h-[300%] w-[300%] absolute left-[-35px] top-[-30px]  lg:left-[-85px] lg:top-[-67px] md:left-[-55px] md:top-[-45px] '} cursor-pointer`} onMouseEnter={()=>{setOnImg(true)}} onMouseLeave={()=>{setOnImg(false)}} onClick={()=>{Router.push('/')}} >
             {
             onImg? 
@@ -70,3 +70,6 @@ const LeftNav = ({scroll} : Props ) => {
 }
 
 export default LeftNav
+
+// absolute left-[-35px] top-[-30px]  lg:left-[-85px] lg:top-[-67px] md:left-[-55px] md:top-[-45px] 
+// flex content-center text-center

@@ -4,7 +4,7 @@ import 'tailwindcss/tailwind.css'
 
 import type { AppProps } from 'next/app'
 import Layout from '../components/Layout'
-import FirstTImeGif from '../components/firstTImeGif'
+import FirstTImeGif from '../components/FirstTImeGif'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = React.useState(true)

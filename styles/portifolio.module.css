@@ -9,7 +9,7 @@ body:hover .imgDiv:not(:hover) {
     filter: blur(12px);
   } */
 
-  body:hover .imgDiv { opacity:0.5;  transition: opacity 1.2s ease-in-out .5s}
+  body:hover .imgDiv { opacity:0.5;  transition: opacity .7s ease-in-out .5s}
   body .imgDiv:hover { opacity:1;   }
 
   /*///////////////////////
