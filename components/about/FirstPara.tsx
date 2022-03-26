@@ -19,7 +19,7 @@ export function PortifolioPara(){
     return (
         <div className='text-4xl sm:text-9xl font-extrabold flex h-screen scale-y-50 px-4 items-center font-Staatliches'>
              <TypeWriter typing={1}>
-               SHIFTING BRANDS FROM GIVING UP TO MOVING FORWARD <span className={styles.blinker}>!</span>
+               SHIFTING BRANDS FROM GIVING UP TO MOVING FORWARD 
             </TypeWriter>
             
     

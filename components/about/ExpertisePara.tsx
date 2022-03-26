@@ -1,37 +1,40 @@
+import Image from 'next/image'
 import React from 'react'
 import styles from '../../styles/Home.module.css'
+import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+
 type Props = {}
 
 const ExpertisePara = (props: Props) => {
   return (
     <div>
-        <div className='bg-white  text-black py-11 ' >
+        <div className='bg-white text-black p-5' >
 
-            <div className='text-6xl sm:text-9xl font-extrabold  flex scale-y-50 font-Staatliches'>
+            <div className='text-6xl sm:text-9xl font-extrabold flex  scale-y-50 font-Staatliches'>
                 Expertise
             </div>
 
-            <div className='flex flex-row flex-wrap gap-3 sm:gap-10 justify-evenly '>
+            <div className='flex flex-row flex-wrap gap-5 sm:gap-[8rem] justify-evenly my-10 '>
 
-            <img className='max-w-[5em] sm:max-w-[10em]' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+            <i className="devicon-react-original text-[5em] sm:text-[8em]"></i>
 
-            <img className='max-w-[5em] sm:max-w-[10em]' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-           
-            <img className='max-w-[5em] sm:max-w-[10em] ' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" />
+            <i className="devicon-javascript-plain text-[5em] sm:text-[8em]"></i>
 
-            <img className='max-w-[5em] sm:max-w-[10em]' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" />
+            <SiNextdotjs className=" text-[5em] sm:text-[8em]"/>
+          
+
+            <i className="text-[5em] sm:text-[8em] devicon-typescript-plain"></i>
+          
+            <SiTailwindcss className=" text-[5em] sm:text-[8em]"/>
 
 
-            <img className='max-w-[5em] sm:max-w-[10em]' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+            <i className="text-[5em] sm:text-[8em] devicon-html5-plain"></i>
 
-            <img className='max-w-[5em] sm:max-w-[10em]' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+            <i className="text-[5em] sm:text-[8em] devicon-css3-plain"></i>
 
-            <img className='max-w-[5em] sm:max-w-[10em]' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" />
+            <i className="text-[5em] sm:text-[8em] devicon-materialui-plain"></i>
 
-            <img className='max-w-[5em] sm:max-w-[10em]' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" />
-
-            <img className='max-w-[5em] sm:max-w-[10em]' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
-
+            <i className="text-[5em] sm:text-[8em] devicon-bootstrap-plain"></i>
             </div>
             </div>
     </div>

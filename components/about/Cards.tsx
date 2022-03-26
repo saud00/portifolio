@@ -37,12 +37,12 @@ const Cards: React.FC<Props>  = (props: Props) => {
     }
 
   return (
-      <div className= 'cursor-pointer w-[100%] h-[300px] relative rounded-xl'>
+      <div className= 'cursor-pointer w-[100%] h-[300px] relative rounded-lg'>
         {
             changeLogo ? 
-            <Image   src={`${gif}`} alt={`${name}`} layout="fill" onClick={()=>{window.open(`${link}`)}}  className={styles.imgDiv && 'rounded-xl'} onMouseEnter={e=>mouseEnter(e,id)} onMouseLeave={mouseLeave}/>
+            <Image   src={`${gif}`} alt={`${name}`} layout="fill" onClick={()=>{window.open(`${link}`)}}  className={styles.imgDiv && 'rounded-lg'} onMouseEnter={e=>mouseEnter(e,id)} onMouseLeave={mouseLeave}/>
             :
-            <Image   src={`${imgsrc}`} alt={`${name}`}  layout="fill" onClick={()=>{window.open(`${link}`)}}  className={styles.imgDiv && 'rounded-xl'} onMouseEnter={e=>mouseEnter(e,id)} onMouseLeave={mouseLeave}/>
+            <Image   src={`${imgsrc}`} alt={`${name}`}  layout="fill" onClick={()=>{window.open(`${link}`)}}  className={styles.imgDiv && 'rounded-lg'} onMouseEnter={e=>mouseEnter(e,id)} onMouseLeave={mouseLeave}/>
         }
     </div>
     

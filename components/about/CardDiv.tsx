@@ -51,7 +51,7 @@ const CardDiv = ({setBlurStyle}) => {
         {
             cardData.map((val , ind)=>{
                 return(
-                    <div  key={ind} style={{maxWidth:360, maxHeight:350, width:345, height:340, margin:'10px auto'}}  className='rounded-xl bg-inherit' onMouseEnter={()=>{setBlurStyle(true)}} onMouseLeave={()=>{setBlurStyle(false)}} >
+                    <div  key={ind} style={{maxWidth:360, maxHeight:350, width:345, height:340, margin:'10px auto'}}  className='rounded-lg bg-inherit' onMouseEnter={()=>{setBlurStyle(true)}} onMouseLeave={()=>{setBlurStyle(false)}} >
                         <Cards val={val} ind={ind}/>
 
                     <div className='flex justify-evenly flex-row h-[40px] flex-nowrap py-1 bg-white'>

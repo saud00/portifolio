@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../styles/Home.module.css'
-
+import { FaCode } from "react-icons/fa";
 type Props = {}
 
 const Footer = (props: Props) => {
@@ -11,7 +11,7 @@ const Footer = (props: Props) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by &nbsp;  <b>Saud</b>
+          Build by  Saud &nbsp;&nbsp;<FaCode size={32}/> 
          
         </a>
       </footer>
