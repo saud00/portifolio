@@ -8,13 +8,13 @@ type Props = {}
 const ExpertisePara = (props: Props) => {
   return (
     <div>
-        <div className='bg-white text-black p-5' >
+        <div className='bg-white  p-5' >
 
-            <div className='text-6xl sm:text-9xl font-extrabold flex  scale-y-50 font-Staatliches'>
+            <div className='text-6xl sm:text-9xl font-extrabold flex text-black  scale-y-50 font-Staatliches'>
                 Expertise
             </div>
 
-            <div className='flex flex-row flex-wrap gap-5 sm:gap-[8rem] justify-evenly my-10 '>
+            <div className='flex flex-row flex-wrap gap-5 sm:gap-[8rem] text-stone-700 justify-evenly my-10 '>
 
             <i className="devicon-react-original text-[5em] sm:text-[8em]"></i>
 

@@ -11,6 +11,7 @@ import Footer from '../components/Footer'
 import FirstTImeGif from '../components/FirstTImeGif'
 import Resume from '../components/Resume'
 import Publications from '../components/about/Publications'
+import Hire from '../components/about/hire'
 
 
 const Home: NextPage = () => {
@@ -46,8 +47,9 @@ const Home: NextPage = () => {
           <LeftNav scroll={scroll} />
           <FirstPara/>
           <ExpertisePara/>
-        <Publications/>
-        <Resume/>
+          <Publications/>
+          <Resume/>
+          <Hire/>
         </main>
 
     </div>
