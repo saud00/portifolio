@@ -39,15 +39,15 @@ const LeftNav = ({scroll} : Props ) => {
         <div className={`h-[50%] flex flex-col flex-wrap flex-1 justify-evenly ${scroll !== undefined && scroll >80 && 'max-h-[30%]' } `}>
 
           <div className='mx-auto'  >
-          <FiGithub size='2em' className='hover:text-slate-400' onClick={()=>{window.open('https://github.com/saud00')}}/>
+          <FiGithub size='2em' className='hover:text-slate-400 cursor-pointer' onClick={()=>{window.open('https://github.com/saud00')}}/>
           </div>
 
           <div className='mx-auto'  >
-            <FaLinkedinIn size='2em' className='hover:text-blue-400' onClick={()=>{window.open('https://www.linkedin.com/in/saud-malik%F0%9F%92%AD-2b50a2120/')}}/>
+            <FaLinkedinIn size='2em' className='hover:text-slate-400 cursor-pointer' onClick={()=>{window.open('https://www.linkedin.com/in/saud-malik%F0%9F%92%AD-2b50a2120/')}}/>
           </div>
 
           <div className='mx-auto'>
-            <FiTwitter size='2em' className='hover:text-blue-400' onClick={()=>{window.open('https://twitter.com/Saud_sahib')}}/>
+            <FiTwitter size='2em' className='hover:text-slate-400 cursor-pointer' onClick={()=>{window.open('https://twitter.com/Saud_sahib')}}/>
           </div>
 
           <div style={{ writingMode:'vertical-rl',fontFamily: 'Orbitron'}} className={`mx-auto opacity-30 ${scroll !== undefined && scroll>80 && 'hidden' }`} >

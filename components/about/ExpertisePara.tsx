@@ -14,7 +14,7 @@ const ExpertisePara = (props: Props) => {
                 Expertise
             </div>
 
-            <div className='flex flex-row flex-wrap gap-5 sm:gap-[8rem] text-stone-700 justify-evenly my-10 '>
+            <div className='flex flex-row flex-wrap gap-5 sm:gap-[8rem] text-zinc-700 justify-evenly my-10 '>
 
             <i className="devicon-react-original text-[5em] sm:text-[8em]"></i>
 

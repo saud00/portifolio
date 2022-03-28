@@ -49,7 +49,6 @@ const Home: NextPage = () => {
           <ExpertisePara/>
           <Publications/>
           <Resume/>
-          <Hire/>
         </main>
 
     </div>
