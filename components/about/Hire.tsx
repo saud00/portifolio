@@ -52,10 +52,3 @@ const Hire = (props: Props) => {
 
 export default Hire
 
-{/*<label>Name</label>
-     <input type="text" name="to_name" />
-     <label>Subject</label>
-     <input type="text" name="subject" />
-     <label>Message</label>
-     <textarea name="message" />
-     <input type="submit" value="Send" /> */}

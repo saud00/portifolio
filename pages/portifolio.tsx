@@ -1,10 +1,9 @@
 import React,{useState} from 'react'
 import CardDiv from '../components/about/CardDiv'
 import { PortifolioPara } from '../components/about/FirstPara'
-import Hire from '../components/about/hire'
+import Hire from '../components/about/Hire'
 import Footer from '../components/Footer'
 import LeftNav from '../components/LeftNav'
-import styles from '../styles/portifolio.module.css'
 
 
 type Props = {

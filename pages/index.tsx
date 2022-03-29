@@ -1,17 +1,13 @@
 import type { NextPage } from 'next'
 import React, {useEffect, useState, useRef} from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import gsap from 'gsap'
 import FirstPara from '../components/about/FirstPara'
 import LeftNav from '../components/LeftNav'
 import ExpertisePara from '../components/about/ExpertisePara'
 import Footer from '../components/Footer'
-import FirstTImeGif from '../components/FirstTImeGif'
 import Resume from '../components/Resume'
 import Publications from '../components/about/Publications'
-import Hire from '../components/about/hire'
 
 
 const Home: NextPage = () => {
