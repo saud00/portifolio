@@ -30,7 +30,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Saud</title>
         <meta name="description" content="best portifilio site by saud" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo1.png" />
       </Head>
 
 

@@ -19,7 +19,7 @@ const cardData:CARDS = [
         id:1,
         name: "tour site",
         imgsrc: '/tour.jpg',
-        gif:'/toursity.gif',
+        gif:'toursity.gif',
         link: 'https://tour2.netlify.app/',
         logo1: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg',
         logo2: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg'
@@ -28,7 +28,7 @@ const cardData:CARDS = [
         id:2,
         name:"resturent site",
         imgsrc:'/hotel.png',
-        gif:'/hotel.gif',
+        gif:'hotel.gif',
         link:'https://friendlyhotel.netlify.app/',
         logo1:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
         logo2:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
@@ -37,7 +37,7 @@ const cardData:CARDS = [
         id:3,
         name:'business',
         imgsrc:'/business.png',
-        gif:'/business.gif',
+        gif:'business.gif',
         link:'https://busines12.netlify.app/',
         logo1:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
         logo2:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
