@@ -19,10 +19,10 @@ interface Props {
 
 const Cards: React.FC<Props>  = (props: Props) => {
     const {id, name, imgsrc, link, gif, logo1, logo2} = props.val;
-    const [changeLogo, setChangeLogo] = useState(false)
+    const [changeLogo, setChangeLogo] = useState(true)
 
     const mouseEnter=(e,id:any)=>{
-            setChangeLogo(true)
+            setChangeLogo(false)
             {
                 id === 1 ? document.body.style.backgroundColor = "rgb(6 95 70)" :
                 id === 2 ? document.body.style.backgroundColor = "rgb(115 16 16)" :
@@ -40,9 +40,9 @@ const Cards: React.FC<Props>  = (props: Props) => {
       <div className= 'cursor-pointer w-[100%] h-[300px] relative rounded'>
         {
             changeLogo ? 
-            <Image   src={`${gif}`} alt={`${name}`} layout="fill" onClick={()=>{window.open(`${link}`)}}  className={styles.imgDiv && 'rounded'} onMouseEnter={e=>mouseEnter(e,id)} onMouseLeave={mouseLeave}/>
-            :
             <Image   src={`${imgsrc}`} alt={`${name}`}  layout="fill" onClick={()=>{window.open(`${link}`)}}  className={styles.imgDiv && 'rounded'} onMouseEnter={e=>mouseEnter(e,id)} onMouseLeave={mouseLeave}/>
+            :
+            <Image   src={`${gif}`} alt={`${name}`} layout="fill" onClick={()=>{window.open(`${link}`)}}  className={styles.imgDiv && 'rounded'} onMouseEnter={e=>mouseEnter(e,id)} onMouseLeave={mouseLeave}/>
         }
     </div>
     
