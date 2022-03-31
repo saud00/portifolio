@@ -37,7 +37,7 @@ const Hire = (props: Props) => {
            <div className='flex flex-row '>
 
                 <label className='basis-1/3'>Message</label>
-                <textarea rows={4} cols={4} name="message" className='shadow-sm basis-2/3 focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md'></textarea>
+                <textarea rows={4} cols={4} name="message" className='shadow-sm basis-2/3 focus:ring-indigo-500 text-black focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md'></textarea>
            </div>
            <div className='flex flex-row w-full p-4'>
                 <button type="submit" value="Send" className='bg-gray-700 hover:bg-white hover:text-black w-[80%] sm:w-[40%] p-3 text-md mx-auto rounded'>Submit</button>

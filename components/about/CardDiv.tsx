@@ -1,5 +1,6 @@
 import React from 'react'
 import Cards from './Cards'
+import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
 
 type CARDS = {
@@ -21,8 +22,8 @@ const cardData:CARDS = [
         imgsrc: '/tour.jpg',
         gif:'tour.gif',
         link: 'https://tour2.netlify.app/',
-        logo1: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg',
-        logo2: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg'
+        logo1: 'devicon-nextjs-plain-wordmark',
+        logo2: 'devicon-materialui-plain'
     },
     {
         id:2,
@@ -30,8 +31,8 @@ const cardData:CARDS = [
         imgsrc:'/hotel.png',
         gif:'hotel.gif',
         link:'https://friendlyhotel.netlify.app/',
-        logo1:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
-        logo2:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        logo1:"devicon-react-original",
+        logo2:'devicon-bootstrap-plain',
     },
     {
         id:3,
@@ -39,8 +40,8 @@ const cardData:CARDS = [
         imgsrc:'/business.png',
         gif:'business.gif',
         link:'https://busines12.netlify.app/',
-        logo1:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
-        logo2:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        logo1:"devicon-react-original",
+        logo2:'devicon-bootstrap-plain',
 
     }
 ]
@@ -51,12 +52,14 @@ const CardDiv = ({setBlurStyle}) => {
         {
             cardData.map((val , ind)=>{
                 return(
-                    <div  key={ind} style={{maxWidth:360, maxHeight:340, width:345, height:340, margin:'10px auto'}}  className='rounded-lg bg-inherit' onMouseEnter={()=>{setBlurStyle(true)}} onMouseLeave={()=>{setBlurStyle(false)}} >
+                    <div  key={ind} style={{maxWidth:360, maxHeight:340, width:345, height:340, margin:'10px auto'}}  className='rounded-lg bg-white' onMouseEnter={()=>{setBlurStyle(true)}} onMouseLeave={()=>{setBlurStyle(false)}} >
                         <Cards val={val} ind={ind}/>
 
-                    <div className='flex justify-evenly flex-row h-[40px] flex-nowrap py-1 bg-white'>
-                        <img  src={`${val.logo1}`} alt={`${val.name}`}   className='w-[4em]  ' />
-                        <img  src={`${val.logo2}`} alt={`${val.name}`}  className='w-[4em] ' />
+                    <div className='flex justify-evenly flex-row h-[40px] flex-nowrap py-1 bg-white text-black'>
+                        {val.id == 1 ? 
+                        <img alt='next.js' className='w-[2em] ' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg'/>
+                        :  <i  className={`text-[2em] ${val.logo1}`} />}
+                        <i   className={`text-[2em] ${val.logo2}`} />
 
                     </div>
                     </div>
