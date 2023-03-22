@@ -18,24 +18,41 @@ type CARDS = {
 const cardData:CARDS = [
     {
         id:1,
+        name: "SAAS PIXLS RFP WEB APPLICATION",
+        imgsrc: '/pixlss.png',
+        gif:'pixls.png',
+        link: 'https://pixlsio.vercel.app/',
+        logo1: 'devicon-nextjs-plain-wordmark',
+        logo2: 'devicon-firebase-plain'
+    },
+    {
+        id:2,
+        name:"NGO site",
+        imgsrc:'/ngos.png',
+        gif:'ngo.png',
+        link:'https://humanhope.org/',
+        logo1:"devicon-react-original",
+        logo2:'devicon-materialui-plain',
+    },    {
+        id:3,
         name: "tour site",
-        imgsrc: '/tour.jpg',
+        imgsrc: '/tours.png',
         gif:'tour.gif',
         link: 'https://tour2.netlify.app/',
         logo1: 'devicon-nextjs-plain-wordmark',
         logo2: 'devicon-materialui-plain'
     },
     {
-        id:2,
+        id:4,
         name:"resturent site",
-        imgsrc:'/hotel.png',
+        imgsrc:'/hotels.png',
         gif:'hotel.gif',
         link:'https://friendlyhotel.netlify.app/',
         logo1:"devicon-react-original",
         logo2:'devicon-bootstrap-plain',
     },
     {
-        id:3,
+        id:5,
         name:'business',
         imgsrc:'/business.png',
         gif:'business.gif',
@@ -48,6 +65,11 @@ const cardData:CARDS = [
 
 const CardDiv = ({setBlurStyle}) => {
   return (
+    <div className='p-5'>
+        <div className='text-4xl sm:text-5xl font-extrabold flex scale-y-50 font-Staatliches my-5  text-black'>
+            RECENT PROJECTS
+        </div>
+
     <div  style={{display:'flex', flexWrap:'wrap', justifyContent:'space-evenly', backgroundColor: 'inherit', width:'100%'}} className='bg-inherit' >
         {
             cardData.map((val , ind)=>{
@@ -66,6 +88,7 @@ const CardDiv = ({setBlurStyle}) => {
                 )
             })
         }
+    </div>
     </div>
   )
 }

@@ -23,16 +23,15 @@ const Portifolio = (props: Props) => {
         return () => window.removeEventListener('scroll', handleScroll);
     });
 
-
   return (
       
     <main className={`${  scroll>80 && 'transition ease-in-out delay-150 duration-700 dark:dark:bg-black dark:bg-opacity-85  dark:text-white'} ${blurStyle && 'dark:bg-opacity-0' } h-screen pl-[10vw] md:pl-[6vw]`} >
 
-    <LeftNav scroll={scroll}/>
-    <PortifolioPara/>
-    <CardDiv setBlurStyle={setBlurStyle} />
-    <Hire/>
-    <Footer/>
+      <LeftNav scroll={scroll}/>
+        <PortifolioPara/>
+          <CardDiv setBlurStyle={setBlurStyle} /> 
+        <Hire/>
+      <Footer/>
   </main>
 
   )
