@@ -21,7 +21,7 @@ const cardData:CARDS = [
         name: "SAAS PIXLS RFP WEB APPLICATION",
         imgsrc: '/pixlss.png',
         gif:'pixls.png',
-        link: 'https://pixlsio.vercel.app/',
+        link: 'https://pixls.io/',
         logo1: 'devicon-nextjs-plain-wordmark',
         logo2: 'devicon-firebase-plain'
     },
